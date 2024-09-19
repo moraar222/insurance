@@ -1,8 +1,6 @@
 import "./globals.css"
 import { siteConfig } from "@/config/site"
 import { Inter } from "next/font/google"
-import Navbar from "@/components/layout/navbar"
-import Footer from "@/components/layout/footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import { settings } from "@/config/settings"
 
@@ -70,15 +68,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         {settings.themeToggleEnabled ? (
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <Navbar />
             {children}
-            <Footer />
           </ThemeProvider>
         ) : (
           <ThemeProvider attribute="class" forcedTheme="light" enableSystem>
-            <Navbar />
             {children}
-            <Footer />
           </ThemeProvider>
         )}
       </body>

@@ -90,6 +90,16 @@ export default function Navbar() {
                   </Link>
                 </li>
               ))}
+              {/* Added About link */}
+              <li>
+                <Link
+                  className="hover:underline"
+                  href="/about"
+                  onClick={handleClick}
+                >
+                  About
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
