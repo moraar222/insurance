@@ -10,7 +10,9 @@ import { HeroHeader, ContentSection } from "@/types/contents"
 export const heroHeader: HeroHeader = {
   header: `Monitor Customer Lifetime Value with Ease`,
   subheader: `Track, predict, and optimize the lifetime value of your customers with advanced insights and real-time data`,
-  image: `/Insurance.jpg`, // Replace with your hero image
+  image: `/Insurance.jpg`,
+  lightImage: undefined,
+  darkImage: undefined
 }
 
 export const featureCards: ContentSection = {

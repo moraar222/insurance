@@ -74,10 +74,9 @@ export default function Navbar() {
         </div>
         <div>
           <div
-            className={`absolute left-0 right-0 z-10 m-auto justify-self-center rounded-md border bg-background p-4 md:static md:mt-0 md:block md:border-none md:p-0 ${
-              navbar ? "block" : "hidden"
-            }`}
-            style={{ width: "100%", maxWidth: "100" }}
+            className={`fixed top-0 left-0 right-0 bottom-0 z-10 bg-background p-4 transition-transform duration-500 ease-in-out ${
+              navbar ? "transform translate-y-0" : "transform -translate-y-full"
+            } md:static md:transform-none md:mt-0 md:block md:border-none md:p-0`}
           >
             <ul className="flex flex-col items-center space-y-4 text-primary opacity-60 md:flex-row md:space-x-6 md:space-y-0">
               {navLinks.map((link) => (
@@ -96,12 +95,14 @@ export default function Navbar() {
         </div>
         <div className="flex items-center gap-4">
           <Link href="/register">
-            <button className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">
+            <button className="px-5 py-2 rounded-full font-medium transition-all shadow-md hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-light dark:focus:ring-primary-dark 
+               text-black border border-gray-300 dark:bg-black dark:text-white dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
               Sign Up
             </button>
           </Link>
           <Link href="/login">
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
+            <button className="px-5 py-2 rounded-full font-medium transition-all shadow-md hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-light dark:focus:ring-primary-dark 
+              bg-black text-white border border-gray-700 dark: dark:text-black dark:border-gray-300 hover:bg-gray-800 dark:hover:bg-gray-100">
               Login
             </button>
           </Link>

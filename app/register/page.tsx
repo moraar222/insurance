@@ -6,7 +6,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 
 export default function Register() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-white">
+    <div className="flex min-h-screen items-center justify-center ">
       <div className="w-full max-w-md space-y-8 p-8">
         <div className="text-center">
           <h2 className="text-2xl font-semibold mt-6">Create your account</h2>
@@ -16,7 +16,7 @@ export default function Register() {
         </div>
 
         {/* Google Sign-In Button */}
-        {/* <Button className="w-full bg-white border border-gray-300 text-gray-600 py-2 rounded-md hover:bg-gray-100">
+        {/* <Button className="w-full  border border-gray-300 text-gray-600 py-2 rounded-md hover:bg-gray-100">
           <img src="/google-icon.svg" alt="Google" className="inline mr-2 h-4" />
           Login with Google
         </Button> */}

@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function ForgotPassword() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-white">
+    <div className="flex min-h-screen items-center justify-center ">
       <div className="w-full max-w-md space-y-8 p-8">
         <div className="text-center">
           <h2 className="text-2xl font-semibold mt-6">Reset your password</h2>

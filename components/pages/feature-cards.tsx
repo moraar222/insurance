@@ -27,7 +27,7 @@ const FeatureCards = () => {
         <p className="text-lg text-gray-600">
           Track, predict, and optimize the lifetime value of your customers with advanced insights and real-time data
         </p>
-        <button className="mt-6 px-6 py-3 bg-green-600 text-white font-semibold rounded hover:bg-green-700 transition">
+        <button className="mt-6 px-6 py-3 bg-black text-white font-semibold rounded hover:bg-gray-800 transition">
           Build My Office
         </button>
       </div>
@@ -38,13 +38,13 @@ const FeatureCards = () => {
         <p className="text-gray-500 mt-2">Enhance your strategies with cutting-edge insights</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {cards.map((card, index) => {
           const IconComponent = Icons[card.icon as keyof typeof Icons];
 
           return (
-            <div key={index} className="text-center shadow-lg p-6 rounded-md bg-white">
-              {IconComponent && <IconComponent className="text-green-600 text-4xl mb-4 mx-auto" />}
+            <div key={index} className="text-center shadow-lg p-6 rounded-md">
+              {IconComponent && <IconComponent className="text-black text-4xl mb-4 mx-auto" />}
               <h3 className="text-xl font-semibold mb-2">{card.text}</h3>
               <p className="text-gray-500">{card.subtext}</p>
             </div>
