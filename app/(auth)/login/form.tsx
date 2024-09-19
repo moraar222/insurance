@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { Button } from '@/components/ui/button';
@@ -11,7 +11,7 @@ const LoginForm: React.FC = () => {
     email: '',
     password: '',
   });
-  const [showPassword, setShowPassword] = useState<boolean>(false); // State to toggle password visibility
+  const [showPassword, setShowPassword] = useState<boolean>(false);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -36,8 +36,8 @@ const LoginForm: React.FC = () => {
       const data = await response.json();
 
       if (!response.ok) {
-        if (data.error === 'Email not found') {
-          toast.error('Email does not exist. Please check and try again.');
+        if (data.error === 'Email already in use') {
+          toast.error('Email is already in use. Please try logging in or use a different email.');
         } else if (data.error === 'Invalid password') {
           toast.error('Incorrect password. Please try again.');
         } else {
@@ -81,7 +81,7 @@ const LoginForm: React.FC = () => {
           <Input
             id="password"
             name="password"
-            type={showPassword ? 'text' : 'password'} // Toggle password visibility
+            type={showPassword ? 'text' : 'password'}
             required
             value={formData.password}
             onChange={handleChange}
@@ -91,7 +91,7 @@ const LoginForm: React.FC = () => {
           <button
             type="button"
             className="absolute inset-y-0 right-0 pr-3 flex items-center"
-            onClick={() => setShowPassword(!showPassword)} // Toggle state
+            onClick={() => setShowPassword(!showPassword)}
           >
             {showPassword ? (
               <svg
