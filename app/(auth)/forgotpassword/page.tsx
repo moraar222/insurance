@@ -20,7 +20,7 @@ export default function ForgotPassword() {
           {/* Email Field */}
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-              Email<span className="text-red-500">*</span>
+              Email<span className="">*</span>
             </label>
             <Input
               id="email"
